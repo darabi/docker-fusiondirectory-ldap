@@ -1,4 +1,4 @@
-## -*- docker-image-name: "mcreations/openwrt-ldap-fd" -*-
+## -*- docker-image-name: "mcreations/docker-fusiondirectory-ldap" -*-
 
 FROM mcreations/openwrt-ldap
 MAINTAINER Reza Rahimi <rahimi@m-creations.net>
