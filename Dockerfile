@@ -7,4 +7,4 @@ ADD image/root/ /
 
 EXPOSE 389
 
-CMD ["/start-slapd"]
+CMD ["/start-slapd-fd"]

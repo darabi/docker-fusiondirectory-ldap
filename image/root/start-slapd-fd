@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cat <<EOF > "/tmp/ldap-base"
+dn: @SUFFIX@
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+objectClass: gosaDepartment
+o: @ORGANIZATION@
+dc: @DOMAINCOMPONENT@
+ou: @DOMAINCOMPONENT@
+description: @DOMAINCOMPONENT@ in @ORGANIZATION@
+
+dn: cn=admin,@SUFFIX@
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword: @PASSWORD@
+EOF
+
+. start-slapd
