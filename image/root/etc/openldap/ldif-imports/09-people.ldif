@@ -1,0 +1,16 @@
+dn: ou=people,dc=example,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: uid=fd-admin,ou=people,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: gosaAccount
+objectClass: person
+objectClass: top
+cn: System Administrator-fd-admin
+sn: Administrator
+uid: fd-admin
+givenName: System
+userPassword: @PASSWORD@
+

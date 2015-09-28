@@ -1,0 +1,12 @@
+dn: ou=systems,dc=example,dc=com
+objectClass: organizationalUnit
+ou: systems
+
+dn: ou=configs,ou=systems,dc=example,dc=com
+objectClass: organizationalUnit
+ou: configs
+
+dn: ou=fusiondirectory,ou=configs,ou=systems,dc=example,dc=com
+objectClass: organizationalUnit
+ou: fusiondirectory
+

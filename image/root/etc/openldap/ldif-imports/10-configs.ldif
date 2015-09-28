@@ -1,0 +1,67 @@
+dn: ou=configs,dc=example,dc=com
+objectClass: organizationalUnit
+ou: configs
+
+dn: cn=fusiondirectory,ou=configs,dc=example,dc=com
+objectClass: fdSystemsPluginConf
+objectClass: fusionDirectoryPluginsConf
+objectClass: fusionDirectoryConf
+cn: fusiondirectory
+fdAccountPrimaryAttribute: uid
+fdAclRoleRDN: ou=aclroles
+fdComponentRDN: ou=netdevices,ou=systems
+fdCopyPaste: TRUE
+fdDebugLevel: 0
+fdDisplayErrors: FALSE
+fdDisplayHookOutput: FALSE
+fdEnableSnapshots: TRUE
+fdEncodings: UTF-8=UTF-8
+fdEncodings: ISO8859-1=ISO8859-1 (Latin 1)
+fdEncodings: ISO8859-2=ISO8859-2 (Latin 2)
+fdEncodings: ISO8859-3=ISO8859-3 (Latin 3)
+fdEncodings: ISO8859-4=ISO8859-4 (Latin 4)
+fdEncodings: ISO8859-5=ISO8859-5 (Latin 5)
+fdEncodings: cp850=CP850 (Europe)
+fdForcePasswordDefaultHash: FALSE
+fdForceSSL: FALSE
+fdGidNumberBase: 1100
+fdGroupRDN: ou=groups
+fdHandleExpiredAccounts: FALSE
+fdIdAllocationMethod: traditional
+fdLanguage: en_US
+fdLdapSizeLimit: 200
+fdLdapStats: FALSE
+fdListSummary: TRUE
+fdLogging: TRUE
+fdLoginAttribute: uid
+fdMinId: 100
+fdMobilePhoneRDN: ou=mobile,ou=systems
+fdModificationDetectionAttribute: entryCSN
+fdOGroupRDN: ou=groups
+fdPasswordDefaultHash: ssha
+fdPrimaryGroupFilter: FALSE
+fdPrinterRDN: ou=printers,ou=systems
+fdRfc2307bis: FALSE
+fdSchemaCheck: TRUE
+fdServerRDN: ou=servers,ou=systems
+fdSessionLifeTime: 1800
+fdShells: /bin/ash
+fdShells: /bin/bash
+fdShells: /bin/csh
+fdShells: /bin/sh
+fdShells: /bin/ksh
+fdShells: /bin/tcsh
+fdShells: /bin/dash
+fdShells: /bin/zsh
+fdSnapshotBase: ou=snapshots,dc=example,dc=com
+fdStrictNamingRules: TRUE
+fdSystemRDN: ou=systems
+fdTerminalRDN: ou=terminals,ou=systems
+fdTheme: default
+fdTimezone: Europe/Paris
+fdUidNumberBase: 1100
+fdUserRDN: ou=people
+fdWarnSSL: TRUE
+fdWorkstationRDN: ou=workstations,ou=systems
+fusionConfigMd5: c73c984a0ab06000830b966a73d3f6b4
+

@@ -1,0 +1,4 @@
+dn: ou=snapshots,dc=example,dc=com
+objectClass: organizationalUnit
+ou: snapshots
+
