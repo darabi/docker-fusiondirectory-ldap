@@ -21,7 +21,7 @@ and a volume to store the data:
 docker run -e LDAP_DOMAIN=example.com \
            -e LDAP_ROOTPW=secret \
 	   -v /share/ldap/example.com:/var/openldap-data \
-	   mcreations/openwrt-ldap-fd
+	   mcreations/docker-fusiondirectory-ldap
 ```
 
 Github Repo
