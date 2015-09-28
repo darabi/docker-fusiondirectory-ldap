@@ -1,4 +1,4 @@
-dn: ou=snapshots,dc=example,dc=com
+dn: ou=snapshots,@SUFFIX@
 objectClass: organizationalUnit
 ou: snapshots
 

@@ -1,12 +1,12 @@
-dn: ou=systems,dc=example,dc=com
+dn: ou=systems,@SUFFIX@
 objectClass: organizationalUnit
 ou: systems
 
-dn: ou=configs,ou=systems,dc=example,dc=com
+dn: ou=configs,ou=systems,@SUFFIX@
 objectClass: organizationalUnit
 ou: configs
 
-dn: ou=fusiondirectory,ou=configs,ou=systems,dc=example,dc=com
+dn: ou=fusiondirectory,ou=configs,ou=systems,@SUFFIX@
 objectClass: organizationalUnit
 ou: fusiondirectory
 

@@ -1,8 +1,8 @@
-dn: ou=configs,dc=example,dc=com
+dn: ou=configs,@SUFFIX@
 objectClass: organizationalUnit
 ou: configs
 
-dn: cn=fusiondirectory,ou=configs,dc=example,dc=com
+dn: cn=fusiondirectory,ou=configs,@SUFFIX@
 objectClass: fdSystemsPluginConf
 objectClass: fusionDirectoryPluginsConf
 objectClass: fusionDirectoryConf
@@ -53,7 +53,7 @@ fdShells: /bin/ksh
 fdShells: /bin/tcsh
 fdShells: /bin/dash
 fdShells: /bin/zsh
-fdSnapshotBase: ou=snapshots,dc=example,dc=com
+fdSnapshotBase: ou=snapshots,@SUFFIX@
 fdStrictNamingRules: TRUE
 fdSystemRDN: ou=systems
 fdTerminalRDN: ou=terminals,ou=systems
@@ -64,4 +64,3 @@ fdUserRDN: ou=people
 fdWarnSSL: TRUE
 fdWorkstationRDN: ou=workstations,ou=systems
 fusionConfigMd5: c73c984a0ab06000830b966a73d3f6b4
-
