@@ -1,0 +1,114 @@
+dn: ou=configs,@SUFFIX@
+objectClass: organizationalUnit
+ou: config
+
+dn: cn=fusiondirectory,ou=configs,@SUFFIX@
+structuralObjectClass: fusionDirectoryConf
+cn: fusiondirectory
+fdPasswordDefaultHash: ssha
+fdUserRDN: ou=people
+fdGroupRDN: ou=groups
+fdAclRoleRDN: ou=aclroles
+fdGidNumberBase: 1100
+fdUidNumberBase: 1100
+fdAccountPrimaryAttribute: uid
+fdLoginAttribute: uid
+fdTimezone: Europe/Berlin
+fdRfc2307bis: FALSE
+fdStrictNamingRules: TRUE
+fdHandleExpiredAccounts: FALSE
+fdEnableSnapshots: TRUE
+fdSnapshotBase: ou=snapshots,@SUFFIX@
+fdLanguage: en_US
+fdTheme: default
+fdPrimaryGroupFilter: FALSE
+fdModificationDetectionAttribute: entryCSN
+fdCopyPaste: TRUE
+fdListSummary: TRUE
+fdLdapStats: FALSE
+fdWarnSSL: TRUE
+fdForceSSL: FALSE
+fdSchemaCheck: TRUE
+fdLogging: TRUE
+fdDisplayErrors: FALSE
+fdSessionLifeTime: 1800
+fdDebugLevel: 0
+fdForcePasswordDefaultHash: FALSE
+fdLdapSizeLimit: 200
+fdDisplayHookOutput: FALSE
+fdShells: /bin/ash
+fdShells: /bin/bash
+fdShells: /bin/csh
+fdShells: /bin/sh
+fdShells: /bin/ksh
+fdShells: /bin/tcsh
+fdShells: /bin/dash
+fdShells: /bin/zsh
+fdMinId: 100
+fdIdAllocationMethod: traditional
+objectClass: fusionDirectoryConf
+objectClass: fusionDirectoryPluginsConf
+fdOGroupRDN: ou=groups
+fusionConfigMd5: c73c984a0ab06000830b966a73d3f6b4
+
+dn: ou=people,@SUFFIX@
+objectClass: organizationalUnit
+ou: people
+
+dn: uid=fd-admin,ou=people,@SUFFIX@
+objectClass: top
+objectClass: person
+objectClass: gosaAccount
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+givenName: System
+sn: Administrator
+cn: System Administrator-fd-admin
+uid: fd-admin
+userPassword: @PASSWORD@
+
+dn: ou=aclroles,@SUFFIX@
+objectClass: organizationalUnit
+ou: aclroles
+
+dn: cn=admin,ou=aclroles,@SUFFIX@
+cn: admin
+description: Give all rights on all objects
+objectClass: top
+objectClass: gosaRole
+gosaAclTemplate: 0:all;cmdrw
+
+dn: cn=manager,ou=aclroles,@SUFFIX@
+cn: manager
+description: Give all rights on users in the given branch
+objectClass: top
+objectClass: gosaRole
+gosaAclTemplate: 0:user/password;cmdrw,user/user;cmdrw,user/posixAccount;cmdrw
+
+dn: cn=editowninfos,ou=aclroles,@SUFFIX@
+cn: editowninfos
+description: Allow users to edit their own information (main tab and posix use
+  only on base)
+objectClass: top
+objectClass: gosaRole
+gosaAclTemplate: 0:user/posixAccount;srw,user/user;srw
+
+dn: ou=systems,@SUFFIX@
+objectClass: organizationalUnit
+ou: systems
+
+dn: ou=configs,ou=systems,@SUFFIX@
+objectClass: organizationalUnit
+ou: configs
+
+dn: ou=fusiondirectory,ou=configs,ou=systems,@SUFFIX@
+objectClass: organizationalUnit
+ou: fusiondirectory
+
+dn: ou=snapshots,@SUFFIX@
+objectClass: organizationalUnit
+ou: snapshots
+
+dn: ou=tokens,@SUFFIX@
+objectClass: organizationalUnit
+ou: tokens

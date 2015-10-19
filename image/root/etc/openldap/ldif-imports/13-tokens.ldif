@@ -1,4 +1,0 @@
-dn: ou=tokens,@SUFFIX@
-objectClass: organizationalUnit
-ou: tokens
-

@@ -1,4 +1,0 @@
-dn: ou=snapshots,@SUFFIX@
-objectClass: organizationalUnit
-ou: snapshots
-
