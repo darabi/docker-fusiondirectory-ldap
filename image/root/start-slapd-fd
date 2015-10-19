@@ -6,6 +6,9 @@ objectClass: top
 objectClass: dcObject
 objectClass: organization
 objectClass: gosaDepartment
+objectClass: gosaAcl
+gosaAclEntry: 0:subtree:Y249YWRtaW4sb3U9YWNscm9sZXMsZGM9ZXhhbXBsZSxkYz1jb20=:d
+ WlkPWZkLWFkbWluLG91PXBlb3BsZSxkYz1leGFtcGxlLGRjPWNvbQ==
 o: @ORGANIZATION@
 dc: @DOMAINCOMPONENT@
 ou: @DOMAINCOMPONENT@
