@@ -49,7 +49,7 @@ fdIdAllocationMethod: traditional
 objectClass: fusionDirectoryConf
 objectClass: fusionDirectoryPluginsConf
 fdOGroupRDN: ou=groups
-fusionConfigMd5: c73c984a0ab06000830b966a73d3f6b4
+fusionConfigMd5: e6b598c10191333a759996ac3decb6ac
 
 dn: ou=people,@SUFFIX@
 objectClass: organizationalUnit
@@ -100,6 +100,7 @@ ou: systems
 dn: ou=configs,ou=systems,@SUFFIX@
 objectClass: organizationalUnit
 ou: configs
+ou: config
 
 dn: ou=fusiondirectory,ou=configs,ou=systems,@SUFFIX@
 objectClass: organizationalUnit
@@ -112,3 +113,11 @@ ou: snapshots
 dn: ou=tokens,@SUFFIX@
 objectClass: organizationalUnit
 ou: tokens
+
+dn: ou=groups,@SUFFIX@
+objectClass: organizationalUnit
+ou: groups
+
+dn: ou=roles,@SUFFIX@
+objectClass: organizationalUnit
+ou: roles

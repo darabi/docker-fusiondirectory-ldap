@@ -1,5 +1,11 @@
 #!/bin/bash
 
+SUFFIX="dc=`echo $LDAP_DOMAIN | sed 's/^\.//; s/\.$//; s/\./,dc=/g'`"
+CN_ADMIN="cn=admin,ou=aclroles,$SUFFIX"
+UID_FD_ADMIN="uid=fd-admin,ou=people,$SUFFIX"
+CN_ADMIN_BS64=`php-cli -r "echo base64_encode('$CN_ADMIN');"`
+UID_FD_ADMIN_BS64=`php-cli -r "echo base64_encode('$UID_FD_ADMIN');"`
+
 cat <<EOF > "/tmp/ldap-base"
 dn: @SUFFIX@
 objectClass: top
@@ -7,8 +13,8 @@ objectClass: dcObject
 objectClass: organization
 objectClass: gosaDepartment
 objectClass: gosaAcl
-gosaAclEntry: 0:subtree:Y249YWRtaW4sb3U9YWNscm9sZXMsZGM9ZXhhbXBsZSxkYz1jb20=:d
- WlkPWZkLWFkbWluLG91PXBlb3BsZSxkYz1leGFtcGxlLGRjPWNvbQ==
+gosaAclEntry: 0:subtree:$CN_ADMIN_BS64:$UID_FD_ADMIN_BS64
+
 o: @ORGANIZATION@
 dc: @DOMAINCOMPONENT@
 ou: @DOMAINCOMPONENT@
