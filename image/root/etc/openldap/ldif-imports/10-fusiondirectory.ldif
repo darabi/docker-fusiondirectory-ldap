@@ -1,41 +1,82 @@
 dn: ou=configs,@SUFFIX@
 objectClass: organizationalUnit
-ou: config
+ou: configs
+
+dn: ou=configs,ou=systems,@SUFFIX@
+objectClass: organizationalUnit
+ou: configs
+
+dn: ou=fusiondirectory,ou=configs,ou=systems,@SUFFIX@
+objectClass: organizationalUnit
+ou: fusiondirectory
+
+dn: ou=tokens,@SUFFIX@
+objectClass: organizationalUnit
+ou: tokens
+
+dn: ou=groups,@SUFFIX@
+objectClass: organizationalUnit
+ou: groups
+
+dn: ou=roles,@SUFFIX@
+objectClass: organizationalUnit
+ou: roles
+
+dn: ou=snapshots,@SUFFIX@
+objectClass: organizationalUnit
+ou: snapshots
+
+dn: ou=systems,@SUFFIX@
+objectClass: organizationalUnit
+ou: systems
 
 dn: cn=fusiondirectory,ou=configs,@SUFFIX@
-structuralObjectClass: fusionDirectoryConf
+objectClass: fdSystemsPluginConf
+objectClass: fusionDirectoryPluginsConf
+objectClass: fdMailPluginConf
+objectClass: fusionDirectoryConf
 cn: fusiondirectory
-fdPasswordDefaultHash: ssha
-fdUserRDN: ou=people
-fdGroupRDN: ou=groups
-fdAclRoleRDN: ou=aclroles
-fdGidNumberBase: 1100
-fdUidNumberBase: 1100
 fdAccountPrimaryAttribute: uid
-fdLoginAttribute: uid
-fdTimezone: Europe/Berlin
-fdRfc2307bis: FALSE
-fdStrictNamingRules: TRUE
-fdHandleExpiredAccounts: FALSE
-fdEnableSnapshots: TRUE
-fdSnapshotBase: ou=snapshots,@SUFFIX@
-fdLanguage: en_US
-fdTheme: default
-fdPrimaryGroupFilter: FALSE
-fdModificationDetectionAttribute: entryCSN
+fdAclRoleRDN: ou=aclroles
+fdComponentRDN: ou=netdevices,ou=systems
 fdCopyPaste: TRUE
-fdListSummary: TRUE
-fdLdapStats: FALSE
-fdWarnSSL: TRUE
-fdForceSSL: FALSE
-fdSchemaCheck: TRUE
-fdLogging: TRUE
-fdDisplayErrors: FALSE
-fdSessionLifeTime: 1800
+fdCyrusDeleteMailbox: FALSE
+fdCyrusUseSlashes: FALSE
 fdDebugLevel: 0
-fdForcePasswordDefaultHash: FALSE
-fdLdapSizeLimit: 200
+fdDisplayErrors: TRUE
 fdDisplayHookOutput: FALSE
+fdEnableSnapshots: TRUE
+fdEncodings: UTF-8=UTF-8
+fdEncodings: ISO8859-1=ISO8859-1 (Latin 1)
+fdEncodings: ISO8859-2=ISO8859-2 (Latin 2)
+fdEncodings: ISO8859-3=ISO8859-3 (Latin 3)
+fdEncodings: ISO8859-4=ISO8859-4 (Latin 4)
+fdEncodings: ISO8859-5=ISO8859-5 (Latin 5)
+fdEncodings: cp850=CP850 (Europe)
+fdForcePasswordDefaultHash: FALSE
+fdForceSSL: FALSE
+fdGidNumberBase: 1100
+fdGroupRDN: ou=groups
+fdHandleExpiredAccounts: FALSE
+fdIdAllocationMethod: traditional
+fdLanguage: en_US
+fdLdapSizeLimit: 200
+fdLdapStats: TRUE
+fdListSummary: TRUE
+fdLogging: FALSE
+fdLoginAttribute: uid
+fdMailAttribute: mail
+fdMinId: 100
+fdMobilePhoneRDN: ou=mobile,ou=systems
+fdModificationDetectionAttribute: entryCSN
+fdOGroupRDN: ou=groups
+fdPasswordDefaultHash: ssha
+fdPrimaryGroupFilter: FALSE
+fdPrinterRDN: ou=printers,ou=systems
+fdRfc2307bis: FALSE
+fdSchemaCheck: TRUE
+fdServerRDN: ou=servers,ou=systems
+fdSessionLifeTime: 1800
 fdShells: /bin/ash
 fdShells: /bin/bash
 fdShells: /bin/csh
@@ -44,12 +85,17 @@ fdShells: /bin/ksh
 fdShells: /bin/tcsh
 fdShells: /bin/dash
 fdShells: /bin/zsh
-fdMinId: 100
-fdIdAllocationMethod: traditional
-objectClass: fusionDirectoryConf
-objectClass: fusionDirectoryPluginsConf
-fdOGroupRDN: ou=groups
-fusionConfigMd5: e6b598c10191333a759996ac3decb6ac
+fdSnapshotBase: ou=snapshots,@SUFFIX@
+fdStrictNamingRules: TRUE
+fdSystemRDN: ou=systems
+fdTerminalRDN: ou=terminals,ou=systems
+fdTheme: default
+fdTimezone: Europe/Berlin
+fdUidNumberBase: 1100
+fdUserRDN: ou=people
+fdWarnSSL: TRUE
+fdWorkstationRDN: ou=workstations,ou=systems
+fusionConfigMd5: 8bc6559fb9da6c80aa4b561db0fbf6ae
 
 dn: ou=people,@SUFFIX@
 objectClass: organizationalUnit
@@ -93,31 +139,4 @@ objectClass: top
 objectClass: gosaRole
 gosaAclTemplate: 0:user/posixAccount;srw,user/user;srw
 
-dn: ou=systems,@SUFFIX@
-objectClass: organizationalUnit
-ou: systems
 
-dn: ou=configs,ou=systems,@SUFFIX@
-objectClass: organizationalUnit
-ou: configs
-ou: config
-
-dn: ou=fusiondirectory,ou=configs,ou=systems,@SUFFIX@
-objectClass: organizationalUnit
-ou: fusiondirectory
-
-dn: ou=snapshots,@SUFFIX@
-objectClass: organizationalUnit
-ou: snapshots
-
-dn: ou=tokens,@SUFFIX@
-objectClass: organizationalUnit
-ou: tokens
-
-dn: ou=groups,@SUFFIX@
-objectClass: organizationalUnit
-ou: groups
-
-dn: ou=roles,@SUFFIX@
-objectClass: organizationalUnit
-ou: roles
