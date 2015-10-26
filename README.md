@@ -1,7 +1,9 @@
 docker-fusiondirectory-ldap
 ===========================
 
-A docker image for Fusion Directory Openldap which extends OpenWrt x86_64 and Openwert Ldap.
+A docker image for Fusiondirectory Openldap which extends OpenWrt x86_64 and Openwert Ldap.
+
+This docker imports all FusionDirectory and its plugins' schemas into the Openldap server.
 
 This docker image writes data to
 
