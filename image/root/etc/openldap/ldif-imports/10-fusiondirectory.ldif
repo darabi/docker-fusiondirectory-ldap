@@ -26,6 +26,10 @@ dn: ou=snapshots,@SUFFIX@
 objectClass: organizationalUnit
 ou: snapshots
 
+dn: ou=schema,@SUFFIX@
+objectClass: organizationalUnit
+ou: schema
+
 dn: ou=systems,@SUFFIX@
 objectClass: organizationalUnit
 ou: systems
