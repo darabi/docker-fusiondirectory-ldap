@@ -1,4 +1,4 @@
-#!/bin/bash
+  #!/bin/bash
 
 SUFFIX="dc=`echo $LDAP_DOMAIN | sed 's/^\.//; s/\.$//; s/\./,dc=/g'`"
 CN_ADMIN="cn=admin,ou=aclroles,$SUFFIX"
@@ -19,11 +19,11 @@ dc: @DOMAINCOMPONENT@
 ou: @DOMAINCOMPONENT@
 description: @DOMAINCOMPONENT@ in @ORGANIZATION@
 
-dn: cn=admin,@SUFFIX@
+dn: @ROOTDN@
 objectClass: simpleSecurityObject
 objectClass: organizationalRole
-cn: admin
-description: LDAP administrator
+cn: @LDAPROOT@
+description: LDAP Administrator
 userPassword: @PASSWORD@
 EOF
 
