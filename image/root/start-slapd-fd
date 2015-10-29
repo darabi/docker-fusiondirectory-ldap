@@ -1,4 +1,4 @@
-  #!/bin/bash
+#!/bin/bash
 
 SUFFIX="dc=`echo $LDAP_DOMAIN | sed 's/^\.//; s/\.$//; s/\./,dc=/g'`"
 CN_ADMIN="cn=admin,ou=aclroles,$SUFFIX"
