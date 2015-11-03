@@ -30,3 +30,4 @@ Github Repo
 -----------
 https://github.com/m-creations/docker-fusiondirectory-ldap
 
+For more information see the parent docker here: https://github.com/m-creations/docker-fusiondirectory-ldap
