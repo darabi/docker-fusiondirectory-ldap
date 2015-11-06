@@ -32,10 +32,12 @@ ou: systems
 
 dn: cn=fusiondirectory,ou=configs,@SUFFIX@
 objectClass: fdSystemsPluginConf
+objectClass: fdWebservicePluginConf
 objectClass: fusionDirectoryPluginsConf
 objectClass: fdMailPluginConf
 objectClass: fusionDirectoryConf
 cn: fusiondirectory
+fdWebserviceForceSSL: FALSE
 fdAccountPrimaryAttribute: uid
 fdAclRoleRDN: ou=aclroles
 fdComponentRDN: ou=netdevices,ou=systems
@@ -63,7 +65,7 @@ fdLanguage: en_US
 fdLdapSizeLimit: 200
 fdLdapStats: TRUE
 fdListSummary: TRUE
-fdLogging: FALSE
+fdLogging: TRUE
 fdLoginAttribute: uid,mail
 fdMailAttribute: mail
 fdMinId: 100
@@ -95,7 +97,7 @@ fdUidNumberBase: 1100
 fdUserRDN: ou=people
 fdWarnSSL: TRUE
 fdWorkstationRDN: ou=workstations,ou=systems
-fusionConfigMd5: 8bc6559fb9da6c80aa4b561db0fbf6ae
+fusionConfigMd5: 9f59a453fd90623312cecd08743de613
 
 dn: ou=people,@SUFFIX@
 objectClass: organizationalUnit
